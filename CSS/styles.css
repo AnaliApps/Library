@@ -1,0 +1,55 @@
+*{
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-size: 20px;
+}
+h1{
+    font-size: 30px;
+}
+.innerCard{
+    border: 0.5px solid lightgray;
+    box-shadow: 4px 4px 2px lightgray;
+    width: 30vw;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.innerCard:hover{
+    background-color: grey;
+    transform: translateY(10px);
+    transition: all ease-in 0.3s;
+}
+.card-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+#bookinfo{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+#bookinfo>div{
+    padding: 5px;
+}
+#bookinfo>div>input[type=text],#bookinfo>div>input[type=number]{
+    outline: none;
+    border: 0px solid gray;
+    background-color: lightgray;
+    border-radius: 20px;
+    padding: 10px;
+}
+.innerCard>button,#submit{
+    outline: none;
+    background-color: antiquewhite;
+    border: 0px solid lightgray;
+    border-radius: 20px;
+    padding: 15px;
+    box-shadow: 2px 2px 2px lightgray;
+}

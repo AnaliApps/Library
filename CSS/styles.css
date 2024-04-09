@@ -9,9 +9,9 @@
 }
 .form-container{
     max-width: 20%;
-    position: relative;
+    /* position: relative;
     left: -30%;
-    transition: 1s ease-in-out;
+    transition: 1s ease-in-out; */
 }
 h1{
     font-size: 30px;

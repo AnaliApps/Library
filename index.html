@@ -26,15 +26,18 @@
                 </h1>
                 <div>
                     <label for="title">Name of Book:</label>
-                <input type="text" name="title" id="title" placeholder="The lost ring..">
+                <input type="text" name="title" id="title" placeholder="The lost ring.." required>
+                <p class="help">Please enter a title of a book</p>
                 </div>
                 <div>
                     <label for="author">Author Name:</label>
-                <input type="text" name="author" id="author" placeholder="Anali">
+                <input type="text" name="author" id="author" placeholder="Anali" required>
+                <p class="help">Please enter a author name</p>
                 </div>
                 <div>
                     <label for="pages">Pages:</label>
-                <input type="number" name="pages" id="pages" placeholder="1000">
+                <input type="number" name="pages" id="pages"  min="100" max="1000" placeholder="1000" required>
+                <p class="help">Please enter number of pages(100-1000)</p>
                 </div>
                 <div>
                     <label for="read">Read? :</label>

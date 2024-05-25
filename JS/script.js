@@ -21,6 +21,32 @@ class Book{
     let btnAdd = document.querySelector("#add");
     let search = document.querySelector("#search").value;
 
+bookSubmit.noValidate = true;
+bookSubmit.addEventListener('submit',formValidate)
+function formValidate(e){    
+    const form = e.target
+    const field = [...form.elements].slice(0,3)
+    field.forEach(i=>{
+        i.setCustomValidity('')
+        i.parentElement.classList.remove('invalid')
+    })
+
+    const err = form.title.value || form.author.value || form.pages.value ? '' : 'error'
+    form.title.setCustomValidity(err)
+    form.author.setCustomValidity(err)
+    form.pages.setCustomValidity(err)
+
+    if(!form.checkValidity()){
+        e.preventDefault()
+        e.stopImmediatePropagation()
+        field.forEach(item =>{
+            if(!item.checkValidity()){
+                item.parentElement.classList.add('invalid');
+            }
+        })
+    }
+    
+}
 function bookRead(){
     let ele = document.getElementsByName("read");
     let res = '';
@@ -97,6 +123,9 @@ bookSubmit.addEventListener("submit",e =>{
     addBookToLibrary()
     formCont.style.display = "none";
     card.style.width = "100vw";
+    document.getElementById("title").value = ''
+    document.getElementById("author").value = ''
+    document.getElementById("pages").value = ''
 })
 
 btnAdd.addEventListener("click",()=>{
